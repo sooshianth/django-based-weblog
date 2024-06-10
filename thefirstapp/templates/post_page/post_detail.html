@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post details</title>
+</head>
+<body>
+    <ul>
+        <li><h1><b> {{ post.title }}</b></h1></li>
+        <li><pre> {{ post.text }} </pre></li>
+        <li>created day = {{ post.created_time }}</li>
+    </ul>
+
+
+    ===================<br>
+    Comments:
+    <ul>
+        {% for comment in comments %}
+            <li><pre>{{ comment.text }}</pre>
+                {{ comment.created_time }}</li>
+        {% endfor %}
+    </ul>
+
+
+    <a href="/posts/">BACK TO POSTS</a>
+</body>
+</html>
